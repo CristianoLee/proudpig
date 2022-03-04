@@ -1,0 +1,20 @@
+[
+  {
+      "name": "Don't Let Me Down",
+      "artist": "The Chainsmokers",
+      "url": "./music/Don't Let Me Down.mp3",
+      "cover": "./image/music_cover/dont let me down.jpg" 
+  },
+    {
+      "name": "If I Could Be You",
+      "artist": "Kate Lesing",
+      "url": "./music/If I Could Be You.mp3",
+      "cover": "./image/music_cover/if i could be you.jpg"
+    },
+    {
+      "name": "All Falls Down",
+      "artist": "Alan Walker",
+      "url": "./music/All Falls Down.mp3",
+      "cover": "./image/music_cover/All Falls Down.jpg"
+    }
+]
