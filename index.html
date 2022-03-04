@@ -7,9 +7,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./image/pig.ico" type="image/x-icon">
   <title>得意猪</title>
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
-  <link rel="stylesheet" href="./node_modules/font-awesome/css/font-awesome.css">
-  <link rel="stylesheet" href="./node_modules/aplayer/dist/APlayer.min.css">
+  <script src="./utils/js/jquery-3.5.1.min.js"></script>
+  <script src="/utils/js/axios.min.js"></script>
+  <script src="./utils/js/APlayer.min.js"></script>
+  <link rel="stylesheet" href="./utils/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./utils/css/APlayer.min.css">
 
   <style>
     * {
@@ -187,19 +189,16 @@
   <footer class="footer-container">
     <div class="footer-content"></div>
   </footer>
+  <!-- 音乐盒子 -->
   <div id="aplayer"></div>
-
-  <script src="./node_modules/axios/dist/axios.js"></script>
-  <script src="./node_modules/aplayer/dist/APlayer.min.js"></script>
   <canvas class="canvas"></canvas>
+
   <script src="./js/ball.js"></script>
   <script src="./js/main.js"></script>
   <script src="./js/player.js"></script>
   <script src="./js/changecolor.js"></script>
+
   <script>
-
-
-
     var boxTop = $('.head-bg').height() - 41;
 
     // 记录上一次滚动高度，用于判断滚动方向
