@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  list-style: none;
 }
 
 /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
@@ -24,4 +25,26 @@
 ::selection {
   background: none;
   color: rgba(255, 255, 255, 0.8);
+}
+
+/* 七彩气泡画布 */
+.canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 1920px;
+  height: 1000px;
+  pointer-events: none;
+}
+
+/* 底部 */
+.footer-content {
+  line-height: 1.8;
+  font-size: 14px;
+  color: #848484;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 20px;
 }

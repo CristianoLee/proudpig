@@ -24,12 +24,12 @@
       background-color: rgba(40, 42, 44, 0.6);
       padding-left: 20%;
       /* padding-left: 38%; */
+      z-index: 999;
     }
 
     .nav {
       height: 41px;
       line-height: 41px;
-      list-style: none;
     }
 
     .nav li {
@@ -64,9 +64,11 @@
 
     /* 首页封面 */
     .head-bg {
+      position: relative;
       width: 100%;
       height: 320px;
       background: url(./image/head-light.png) no-repeat 0 -310px/100%;
+      z-index: 99;
     }
 
     /* 主区域 */
@@ -76,7 +78,6 @@
       width: 100%;
       height: 2160px;
       background: #f5f5f5 url(./image/timo.png) no-repeat 0 100px/60%;
-      z-index: -1;
     }
 
     /* 底部 */
@@ -89,64 +90,82 @@
     }
 
     /* head 随着滚轮变化淡入淡出 */
-    .scrollDown {
-      -webkit-transition: all 0.4s;
-      top: -41px;
-    }
-
     .scrollUp {
       -webkit-transition: all 0.4s;
       top: 0;
     }
 
+    .scrollDown {
+      -webkit-transition: all 0.4s;
+      top: -41px;
+    }
+
+    /* 返回顶部随着滚轮变化淡入淡出  */
+    .toolsUp {
+      -webkit-transition: all 0.6s;
+      bottom: 60px;
+    }
+
+    .toolsDown {
+      -webkit-transition: all 0.6s;
+      bottom: 20px;
+    }
 
 
+    .backTopUp {
+      -webkit-transition: all 0.5s;
+      bottom: 20px;
+    }
+
+    .backTopDown {
+      -webkit-transition: all 0.4s;
+      bottom: -50px;
+    }
 
     /* 工具盒子 */
     .tools {
       position: fixed;
-      bottom: 20px;
+      /* bottom: 20px; */
       right: 20px;
       z-index: 99;
     }
 
-    .tools div {
-      background-color: rgba(155, 150, 150, 0.6);
+    .tool {
+      background-color: #848484;
+      opacity: 0.7;
       cursor: pointer;
       color: #fcfcfc;
-      margin-bottom: 15px;
+      margin-top: 10px;
     }
 
-    .tool-logo:hover {
-      background-color: rgba(155, 150, 150, 0.4);
+    /* 返回顶部 */
+    .backTop {
+      position: fixed;
+      right: 20px;
+      z-index: 99;
+    }
+
+    .tool:hover {
+      opacity: 0.9;
     }
 
     .tool-logo {
-      font-size: 16px;
-      padding: 7px;
-    }
-
-    /* 七彩气泡画布 */
-    .canvas {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 9999;
-      width: 1920px;
-      height: 1000px;
-      pointer-events: none;
-    }
-
-    /* 底部 */
-    .footer-content {
-      line-height: 1.8;
-      font-size: 14px;
-      color: #848484;
       text-align: center;
-      width: 80%;
-      margin: 0 auto;
-      padding-top: 50px;
-      box-sizing: border-box;
+      width: 30px;
+      height: 30px;
+      display: table-cell;
+      vertical-align: middle;
+      color: #fff;
+      font-size: 15px;
+    }
+
+    .social {
+      margin: 20px auto;
+    }
+
+    .social span {
+      font-size: 40px;
+      color: #8a9fab;
     }
   </style>
 </head>
@@ -170,19 +189,32 @@
 
   <!-- 右侧工具栏 -->
   <div class="tools">
+    <!-- 搜索待完成 -->
+    <div class="search tool">
+      <span class="fa fa-search tool-logo"></span>
+    </div>
     <!-- 改变肤色 -->
-    <div class="change-color">
+    <div class="change-color tool">
       <span class="fa fa-adjust tool-logo"></span>
     </div>
-    <!-- 返回顶部 -->
-    <div class="backTop">
-      <span class="fa fa-chevron-up tool-logo"></span>
-    </div>
   </div>
+
+  <!-- 返回顶部 -->
+  <div class="backTop tool">
+    <span class="fa fa-chevron-up tool-logo"></span>
+  </div>
+
 
   <!-- 底部 -->
   <footer class="footer-container">
     <div class="footer-content">
+      <ul class="social">
+        <li>
+          <a href="">
+            <span class="fa fa-github"></span>
+          </a>
+        </li>
+      </ul>
       © 2022 得意猪 版权所有. 本站已在风雨中度过<span class="existTime"></span>
     </div>
   </footer>
@@ -197,35 +229,8 @@
   <script src="./js/changecolor.js"></script>
 
   <script>
-    var boxTop = $('.head-bg').height() - 41;
-
-    // 记录上一次滚动高度，用于判断滚动方向
-    let lastHeight = window.innerHeight;
-    // 记录顶部栏隐藏状态
-    let isTopNavHidden = false;
 
 
-    const ScrollToggle = () => {
-      // console.log(window.scrollY, document.offsetTop);
-      if (lastHeight < window.scrollY & window.scrollY > boxTop) {
-        // 向下滚动
-        if (!isTopNavHidden) {
-          $('.t1').removeClass('scrollUp').addClass('scrollDown')
-          isTopNavHidden = true;
-        }
-      } else if (lastHeight > window.scrollY) {
-        // 向上滚动
-        if (isTopNavHidden) {
-          $('.t1').removeClass('scrollDown').addClass('scrollUp')
-          isTopNavHidden = false;
-        }
-      }
-      // 相等则不做处理
-      lastHeight = window.scrollY;
-    }
-
-    // 仅处理鼠标滚动
-    window.addEventListener('wheel', ScrollToggle);
 
 
     // 点击返回顶部头部导航栏淡出
@@ -235,6 +240,8 @@
       }, 500);
       setTimeout(() => {
         $('.t1').removeClass('scrollDown').addClass('scrollUp')
+        $('.backTop').removeClass('backTopUp').addClass('backTopDown')
+        $('.tools').removeClass('toolsUp').addClass('toolsDown')
       }, 450)
     });
 
