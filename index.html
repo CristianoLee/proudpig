@@ -55,7 +55,6 @@
       padding: 7px 14px;
       font-size: 15px;
       color: #fff;
-      text-decoration: none;
     }
 
     i {
@@ -188,7 +187,7 @@
   </div>
 
   <!-- 右侧工具栏 -->
-  <div class="tools">
+  <div class="tools toolsDown">
     <!-- 搜索待完成 -->
     <div class="search tool">
       <span class="fa fa-search tool-logo"></span>
@@ -200,7 +199,7 @@
   </div>
 
   <!-- 返回顶部 -->
-  <div class="backTop tool">
+  <div class="backTop tool backTopDown">
     <span class="fa fa-chevron-up tool-logo"></span>
   </div>
 
@@ -210,7 +209,7 @@
     <div class="footer-content">
       <ul class="social">
         <li>
-          <a href="">
+          <a href="https://github.com/CristianoLee" target="_blank">
             <span class="fa fa-github"></span>
           </a>
         </li>
@@ -229,10 +228,6 @@
   <script src="./js/changecolor.js"></script>
 
   <script>
-
-
-
-
     // 点击返回顶部头部导航栏淡出
     $('.backTop').on('click', function (event) {
       $('html, body').animate({

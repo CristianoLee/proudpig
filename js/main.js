@@ -5,24 +5,20 @@ window.onload = () => {
   )
 }
 
-// 初始化工具位置
-$('.backTop').removeClass('backTopUp').addClass('backTopDown')
-$('.tools').removeClass('toolsUp').addClass('toolsDown')
-
 // 记录上一次滚动高度，用于判断滚动方向
 let lastHeight = window.innerHeight
 
 // 仅处理鼠标滚动
 window.addEventListener('wheel', () => {
   // console.log(window.scrollY);
-  if (window.scrollY > 300) {
+  if (window.scrollY > 259) {
     $('.tools').removeClass('toolsDown').addClass('toolsUp')
     $('.backTop').removeClass('backTopDown').addClass('backTopUp')
   } else {
     $('.tools').removeClass('toolsUp').addClass('toolsDown')
     $('.backTop').removeClass('backTopUp').addClass('backTopDown')
   }
-  if ((lastHeight < window.scrollY) & (window.scrollY > 300)) {
+  if ((lastHeight < window.scrollY) & (window.scrollY > 259)) {
     // 向下滚动
     $('.t1').removeClass('scrollUp').addClass('scrollDown')
   }
