@@ -1,5 +1,11 @@
-// head 禁止拖拽标志
-let nav = document.querySelector('.nav')
-for (let i = 0; i < nav.children.length; i++) {
-  nav.children[i].draggable = true
+// 判断当前页面肤色
+
+// 计算网站创建至今时长
+function buildTime(res) {
+  // 将时间转化为毫秒值
+  let before = pig.toMilliSecond(res.data)
+  setInterval(() => {
+    let time = pig.timeDifference(before)
+    document.querySelector('.existTime').innerText = time
+  }, 1000)
 }

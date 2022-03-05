@@ -1,4 +1,5 @@
-[
+playerData({
+    "data":[
   {
       "name": "Don't Let Me Down",
       "artist": "The Chainsmokers",
@@ -18,3 +19,4 @@
       "cover": "./image/music_cover/All Falls Down.jpg"
     }
 ]
+})
