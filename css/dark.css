@@ -37,5 +37,5 @@
 }
 
 .main-container {
-  background-color: var(--main-bgc);
+  background: var(--main-bgc) url(../image/timo.png) 0 0/60%;
 }
