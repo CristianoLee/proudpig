@@ -1,29 +1,28 @@
 // 切换肤色
 let color = localStorage.getItem('color')
 // 进入页面判断肤色
-if (color === 'light' || !color) {
-  light()
-} else {
+if (color) {
   dark()
+} else {
+  light()
 }
 
 $('.change-color').on('click', () => {
-  if (color === 'light') {
-    $('html').attr('color', 'dark')
-    color = 'dark'
-    dark()
-  } else {
-    $('html').attr('color', '')
-    color = 'light'
+  if (color === 'dark') {
     light()
+  } else {
+    dark()
   }
-  localStorage.setItem('color', color)
 })
 
 function light() {
-  $('#style')[0].href = './css/light.css'
+  color = 'light'
+  $('html').removeAttr('color')
+  localStorage.removeItem('color')
 }
 
 function dark() {
-  $('#style')[0].href = './css/dark.css'
+  color = 'dark'
+  $('html').attr('color', 'dark')
+  localStorage.setItem('color', color)
 }

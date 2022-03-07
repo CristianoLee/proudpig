@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./index.css">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="a"></div>
+  <button class="btn1">切换黑色</button>
+  <button class="btn2">恢复白色</button>
+  <script>
+    document.querySelector('.btn1').onclick = () => {
+      document.querySelector('html').setAttribute('color', 'dark')
+    }
+    document.querySelector('.btn2').onclick = () => {
+      document.querySelector('html').removeAttribute('color')
+    }
+  </script>
+</body>
+
+</html>
