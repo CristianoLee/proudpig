@@ -19,11 +19,9 @@ $('.change-color').on('click', () => {
 })
 
 function light() {
-  $('.main-container').css({ backgroundColor: '#f5f5f5' })
-  $('.head-bg').css({ background: 'url(./image/head-light.png) 0 -310px' })
+  $('#style')[0].href = './css/light.css'
 }
 
 function dark() {
-  $('.main-container').css({ backgroundColor: '#181c27' })
-  $('.head-bg').css({ background: 'url(./image/head-dark.png) 0 -160px/1920px 1080px' })
+  $('#style')[0].href = './css/dark.css'
 }

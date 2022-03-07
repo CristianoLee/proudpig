@@ -1,0 +1,25 @@
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+  background: #ccc8;
+  border-radius: 4px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+  border-radius: 7px;
+  background: rgba(194, 194, 194);
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #aaaf;
+}
+
+.head-bg {
+  background-position: 0 0 !important;
+}
+
+.main-container {
+  background-color: #f5f5f5 !important;
+}
