@@ -9,9 +9,11 @@ if (color === 'light' || !color) {
 
 $('.change-color').on('click', () => {
   if (color === 'light') {
+    $('html').attr('color', 'dark')
     color = 'dark'
     dark()
   } else {
+    $('html').attr('color', '')
     color = 'light'
     light()
   }

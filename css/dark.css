@@ -17,7 +17,7 @@
 }
 
 .head-bg {
-  background-position: 0 320px !important;
+  background: url('../image/head-dark.png')no-repeat 0 -150px/100% 320px;
 }
 
 .main-container {

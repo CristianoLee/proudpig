@@ -17,7 +17,7 @@
 }
 
 .head-bg {
-  background-position: 0 0 !important;
+  background: url('../image/head-light.jpg')no-repeat 0 -300px/100% 320px;
 }
 
 .main-container {
