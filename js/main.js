@@ -20,11 +20,11 @@ window.addEventListener('wheel', () => {
   }
   if ((lastHeight < window.scrollY) & (window.scrollY > 259)) {
     // 向下滚动
-    $('.t1').removeClass('scrollUp').addClass('scrollDown')
+    $('.head-container').removeClass('scrollUp').addClass('scrollDown')
   }
   if (lastHeight > window.scrollY) {
     // 向上滚动
-    $('.t1').removeClass('scrollDown').addClass('scrollUp')
+    $('.head-container').removeClass('scrollDown').addClass('scrollUp')
   }
   // 相等则不做处理
   lastHeight = window.scrollY

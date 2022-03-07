@@ -7,11 +7,19 @@ if (color) {
   light()
 }
 
+let isChange = true
+
 $('.change-color').on('click', () => {
-  if (color === 'dark') {
-    light()
-  } else {
-    dark()
+  if (isChange) {
+    isChange = false
+    setTimeout(() => {
+      isChange = true
+    }, 1000)
+    if (color === 'dark') {
+      light()
+    } else {
+      dark()
+    }
   }
 })
 
