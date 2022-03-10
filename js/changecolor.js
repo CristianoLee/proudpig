@@ -14,7 +14,7 @@ $('.change-color').on('click', () => {
     isChange = false
     setTimeout(() => {
       isChange = true
-    }, 1000)
+    }, 500)
     if (color === 'dark') {
       light()
     } else {
