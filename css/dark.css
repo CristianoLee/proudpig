@@ -2,6 +2,7 @@
   --head-bg: url('../image/head-light.jpg') no-repeat center/cover;
   --main-bgc: #f5f5f5;
   --content-bgc: rgba(255, 255, 255, 0.8);
+  --content-fc: #000;
   --md-bgc: rgba(0, 0, 0, 0.3);
   --scroll-track-bg: #ccc8;
   --scroll-thumb-bg: rgba(194, 194, 194);
@@ -12,6 +13,7 @@
   --head-bg: url('../image/head-dark.png') no-repeat top/cover;
   --main-bgc: #181c27;
   --content-bgc: #262a32;
+  --content-fc: #eee;
   --md-bgc: rgba(10, 2, 2, 0.3);
   --scroll-track-bg: #42454e;
   --scroll-thumb-bg: #848589;
@@ -45,6 +47,9 @@ html {
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
   background-color: var(--content-bgc);
+}
+.main-content section {
+  color: var(--content-fc);
 }
 .main-content section:hover {
   -webkit-transition: all 0.8s;
