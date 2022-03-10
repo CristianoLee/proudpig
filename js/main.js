@@ -11,13 +11,13 @@ $('.backTop').on('click', () => {
     {
       scrollTop: $('html').offset().top
     },
-    500
+    300
   )
   setTimeout(() => {
-    $('.head-container').removeClass('scrollDown').addClass('scrollUp')
+    $('.t1').removeClass('scrollDown').addClass('scrollUp')
     $('.backTop').removeClass('backTopUp').addClass('backTopDown')
     $('.tools').removeClass('toolsUp').addClass('toolsDown')
-  }, 450)
+  }, 300)
 })
 
 // 记录上一次滚动高度，用于判断滚动方向
@@ -25,21 +25,22 @@ let lastHeight = window.innerHeight
 
 // 仅处理鼠标滚动
 window.addEventListener('wheel', () => {
-  // console.log(window.scrollY);
-  if (window.scrollY > 260) {
+  if (window.scrollY > 339) {
     $('.tools').removeClass('toolsDown').addClass('toolsUp')
     $('.backTop').removeClass('backTopDown').addClass('backTopUp')
   } else {
     $('.tools').removeClass('toolsUp').addClass('toolsDown')
     $('.backTop').removeClass('backTopUp').addClass('backTopDown')
   }
-  if ((lastHeight < window.scrollY) & (window.scrollY > 260)) {
+  if ((lastHeight < window.scrollY) & (window.scrollY > 339)) {
     // 向下滚动
     $('.t1').removeClass('scrollUp').addClass('scrollDown')
+    $('.main-list-box').css({ top: '15px' })
   }
   if (lastHeight > window.scrollY) {
     // 向上滚动
     $('.t1').removeClass('scrollDown').addClass('scrollUp')
+    $('.main-list-box').css({ top: '56px' })
   }
   // 相等则不做处理
   lastHeight = window.scrollY

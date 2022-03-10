@@ -9,7 +9,6 @@
 .container {
   margin: 0 auto;
   width: 1170px;
-  height: 41px;
   padding: 0 15px;
 }
 .show {
@@ -34,13 +33,10 @@ i {
   z-index: 99;
 }
 .md {
-  height: 800px;
   padding: 0 15px;
 }
 #main-container {
   position: relative;
-  width: 100%;
-  height: 100%;
   padding: 20px 0;
 }
 #main-container #main {
@@ -56,8 +52,14 @@ i {
   margin-bottom: 15px;
 }
 #main-container #main .main-list {
-  float: right;
   width: 33.33333333%;
+}
+#main-container #main .main-list .main-list-box {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 15px;
 }
 #main-container #main .main-list section {
   height: 360px;
@@ -71,8 +73,6 @@ i {
   pointer-events: none;
 }
 .footer-container {
-  position: absolute;
-  top: 2000px;
   width: 100%;
   height: 200px;
   background-color: #23282d;
