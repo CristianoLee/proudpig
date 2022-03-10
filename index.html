@@ -154,21 +154,4 @@
   <script src="./file/player.json?callback=playerData"></script>
   <script src="./file/main.json?callback=buildTime"></script>
   <script src="./js/changecolor.js"></script>
-
-  <script>
-    // 点击返回顶部头部导航栏淡出
-    $('.backTop').on('click', function (event) {
-      $('html, body').animate(
-        {
-          scrollTop: $('html').offset().top
-        },
-        500
-      )
-      setTimeout(() => {
-        $('.head-container').removeClass('scrollDown').addClass('scrollUp')
-        $('.backTop').removeClass('backTopUp').addClass('backTopDown')
-        $('.tools').removeClass('toolsUp').addClass('toolsDown')
-      }, 450)
-    })
-  </script>
 </html>

@@ -5,6 +5,21 @@ window.onload = () => {
   )
 }
 
+// 点击返回顶部头部导航栏淡出
+$('.backTop').on('click', () => {
+  $('html, body').animate(
+    {
+      scrollTop: $('html').offset().top
+    },
+    500
+  )
+  setTimeout(() => {
+    $('.head-container').removeClass('scrollDown').addClass('scrollUp')
+    $('.backTop').removeClass('backTopUp').addClass('backTopDown')
+    $('.tools').removeClass('toolsUp').addClass('toolsDown')
+  }, 450)
+})
+
 // 记录上一次滚动高度，用于判断滚动方向
 let lastHeight = window.innerHeight
 
@@ -20,11 +35,11 @@ window.addEventListener('wheel', () => {
   }
   if ((lastHeight < window.scrollY) & (window.scrollY > 260)) {
     // 向下滚动
-    $('.head-container').removeClass('scrollUp').addClass('scrollDown')
+    $('.t1').removeClass('scrollUp').addClass('scrollDown')
   }
   if (lastHeight > window.scrollY) {
     // 向上滚动
-    $('.head-container').removeClass('scrollDown').addClass('scrollUp')
+    $('.t1').removeClass('scrollDown').addClass('scrollUp')
   }
   // 相等则不做处理
   lastHeight = window.scrollY

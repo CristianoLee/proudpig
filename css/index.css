@@ -86,12 +86,12 @@
 .scrollUp {
   -webkit-transition: all 0.4s;
   transition: 0.4s;
-  top: 0;
+  top: 0 !important;
 }
 .scrollDown {
   -webkit-transition: all 0.4s;
   transition: 0.4s;
-  top: -41px;
+  top: -41px !important;
 }
 .toolsUp {
   -webkit-transition: all 0.6s;
