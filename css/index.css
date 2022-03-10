@@ -1,0 +1,150 @@
+.topnav {
+  background: rgba(40, 42, 44, 0.6);
+}
+.head-container #pc-topnav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999;
+}
+.head-container #pc-topnav .menu-pc {
+  width: 100%;
+  float: left;
+}
+.head-container #pc-topnav .menu-pc ul {
+  float: left;
+  padding: 0;
+}
+.head-container #pc-topnav .menu-pc ul li {
+  -webkit-transition: all 0.6s;
+  transition: 0.6s;
+  float: left;
+  cursor: pointer;
+  user-select: none;
+}
+.head-container #pc-topnav .menu-pc ul li a {
+  padding: 7px 14px;
+  font-size: 15px;
+  color: #fff;
+  display: block;
+}
+.head-container #pc-topnav .menu-pc ul li:hover {
+  -webkit-transition: all 0.6s;
+  transition: 0.6s;
+  background-color: #eeeeee;
+  color: #000;
+}
+.head-container #pc-topnav .menu-pc ul li:hover a {
+  -webkit-transition: all 0.2s;
+  transition: 0.2s;
+  color: #000;
+}
+.head-container #mobile-topnav {
+  display: none;
+  -webkit-transition: all 0.6s;
+  transition: 0.6s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  font-size: 25px;
+  z-index: 999;
+  text-align: center;
+  color: #fff;
+  height: 60px;
+}
+.head-container #mobile-topnav p {
+  line-height: 60px;
+}
+.head-container #mobile-topnav .nav-toggle {
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  vertical-align: middle;
+  z-index: 100000;
+  color: #fff;
+  position: fixed;
+  top: 11px;
+  right: 5px;
+}
+.menu-mobile {
+  position: fixed;
+  top: 60px;
+  z-index: 888;
+  -webkit-transition: all 0.4s;
+  transition: 0.4s;
+  right: -240px;
+  width: 240px;
+  height: 500px;
+  background: rgba(42, 42, 42, 0.9);
+  padding: 20px;
+}
+.menu-mobile ul a {
+  line-height: 3;
+  color: rgba(255, 255, 255, 0.55);
+}
+.scrollUp {
+  -webkit-transition: all 0.4s;
+  transition: 0.4s;
+  top: 0;
+}
+.scrollDown {
+  -webkit-transition: all 0.4s;
+  transition: 0.4s;
+  top: -41px;
+}
+.toolsUp {
+  -webkit-transition: all 0.6s;
+  transition: 0.6s;
+  bottom: 60px;
+}
+.toolsDown {
+  -webkit-transition: all 0.6s;
+  transition: 0.6s;
+  bottom: 20px;
+}
+.backTopUp {
+  -webkit-transition: all 0.5s;
+  transition: 0.5s;
+  bottom: 20px;
+}
+.backTopDown {
+  -webkit-transition: all 0.4s;
+  transition: 0.4s;
+  bottom: -50px;
+}
+.tools {
+  position: fixed;
+  right: 20px;
+  z-index: 99;
+}
+.tool {
+  background-color: #848484;
+  opacity: 0.7;
+  cursor: pointer;
+  color: #fcfcfc;
+  margin-top: 10px;
+}
+.backTop {
+  position: fixed;
+  right: 20px;
+  z-index: 99;
+}
+.tool:hover {
+  opacity: 0.9;
+}
+.tool-logo {
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  display: table-cell;
+  vertical-align: middle;
+  color: #fff;
+  font-size: 15px;
+}
+.social {
+  margin: 20px auto;
+}
+.social span {
+  font-size: 40px;
+  color: #8a9fab;
+}

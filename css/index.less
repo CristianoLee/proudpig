@@ -1,0 +1,189 @@
+// 头部
+.topnav {
+  background: rgba(40, 42, 44, 0.6);
+}
+
+// 动画公共方法
+.animate(@time) {
+  -webkit-transition: all @time;
+  transition: @time;
+}
+
+.head-container {
+
+
+  // pc端导航栏 
+  #pc-topnav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+
+    // 导航栏菜单
+    .menu-pc {
+      width: 100%;
+      float: left;
+
+      ul {
+        float: left;
+        padding: 0;
+
+        li {
+          .animate(0.6s);
+          float: left;
+          cursor: pointer;
+          user-select: none;
+
+          a {
+            padding: 7px 14px;
+            font-size: 15px;
+            color: #fff;
+            display: block;
+          }
+
+          &:hover {
+            .animate(0.6s);
+            background-color: #eeeeee;
+            color: #000;
+          }
+
+          &:hover a {
+            .animate(0.2s);
+            color: #000;
+          }
+        }
+      }
+    }
+
+  }
+
+  // 移动端导航栏
+  #mobile-topnav {
+    display: none;
+    .animate(0.6s);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    font-size: 25px;
+    z-index: 999;
+    text-align: center;
+    color: #fff;
+    height: 60px;
+
+    p {
+      line-height: 60px;
+    }
+
+    .nav-toggle {
+      width: 45px;
+      height: 45px;
+      text-align: center;
+      vertical-align: middle;
+      z-index: 100000;
+      color: #fff;
+      position: fixed;
+      top: 11px;
+      right: 5px;
+    }
+  }
+}
+
+// 移动端导航栏 
+.menu-mobile {
+  position: fixed;
+  top: 60px;
+  z-index: 888;
+  .animate(0.4s);
+  right: -240px;
+  width: 240px;
+  height: 500px;
+  background: rgba(42, 42, 42, 0.9);
+  padding: 20px;
+
+  ul {
+    a {
+      line-height: 3;
+      color: rgba(255, 255, 255, 0.55);
+    }
+  }
+
+
+}
+
+
+// head 随着滚轮变化淡入淡出 
+.scrollUp {
+  .animate(0.4s);
+  top: 0;
+}
+
+.scrollDown {
+  .animate(0.4s);
+  top: -41px;
+}
+
+// 返回顶部随着滚轮变化淡入淡出  
+.toolsUp {
+  .animate(0.6s);
+  bottom: 60px;
+}
+
+.toolsDown {
+  .animate(0.6s);
+  bottom: 20px;
+}
+
+.backTopUp {
+  .animate(0.5s);
+  bottom: 20px;
+}
+
+.backTopDown {
+  .animate(0.4s);
+  bottom: -50px;
+}
+
+// 工具盒子 
+.tools {
+  position: fixed;
+  right: 20px;
+  z-index: 99;
+}
+
+.tool {
+  background-color: #848484;
+  opacity: 0.7;
+  cursor: pointer;
+  color: #fcfcfc;
+  margin-top: 10px;
+}
+
+// 返回顶部 
+.backTop {
+  position: fixed;
+  right: 20px;
+  z-index: 99;
+}
+
+.tool:hover {
+  opacity: 0.9;
+}
+
+.tool-logo {
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  display: table-cell;
+  vertical-align: middle;
+  color: #fff;
+  font-size: 15px;
+}
+
+.social {
+  margin: 20px auto;
+}
+
+.social span {
+  font-size: 40px;
+  color: #8a9fab;
+}

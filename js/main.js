@@ -11,14 +11,14 @@ let lastHeight = window.innerHeight
 // 仅处理鼠标滚动
 window.addEventListener('wheel', () => {
   // console.log(window.scrollY);
-  if (window.scrollY > 259) {
+  if (window.scrollY > 260) {
     $('.tools').removeClass('toolsDown').addClass('toolsUp')
     $('.backTop').removeClass('backTopDown').addClass('backTopUp')
   } else {
     $('.tools').removeClass('toolsUp').addClass('toolsDown')
     $('.backTop').removeClass('backTopUp').addClass('backTopDown')
   }
-  if ((lastHeight < window.scrollY) & (window.scrollY > 259)) {
+  if ((lastHeight < window.scrollY) & (window.scrollY > 260)) {
     // 向下滚动
     $('.head-container').removeClass('scrollUp').addClass('scrollDown')
   }
@@ -28,6 +28,30 @@ window.addEventListener('wheel', () => {
   }
   // 相等则不做处理
   lastHeight = window.scrollY
+})
+
+let nav_toggle = true
+let nav_width
+// 移动端点击切换导航栏显示
+$('.nav-toggle').on('click', () => {
+  if (nav_toggle) {
+    nav_width = 0
+    $('.fa-navicon').removeClass('fa-navicon').addClass('fa-times')
+  } else {
+    nav_width = -240
+    $('.fa-times').removeClass('fa-times').addClass('fa-navicon')
+  }
+  nav_toggle = !nav_toggle
+  $('.menu-mobile').css({ right: nav_width })
+})
+
+$(window).resize(() => {
+  const e = $(window)
+  if (e.width() > 769) {
+    $('.menu-mobile').css({ right: '-240px' })
+    nav_toggle = true
+    $('.fa-times').removeClass('fa-times').addClass('fa-navicon')
+  }
 })
 
 // 计算网站创建至今时长
