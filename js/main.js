@@ -7,12 +7,7 @@ window.onload = () => {
 
 // 点击返回顶部头部导航栏淡出
 $('.backTop').on('click', () => {
-  $('html, body').animate(
-    {
-      scrollTop: $('html').offset().top
-    },
-    300
-  )
+  $('html, body').animate({ scrollTop: $('html').offset().top }, 300)
   setTimeout(() => {
     $('.t1').removeClass('scrollDown').addClass('scrollUp')
     $('.backTop').removeClass('backTopUp').addClass('backTopDown')
@@ -77,5 +72,5 @@ function buildTime(res) {
   setInterval(() => {
     let time = pig.timeDifference(before)
     document.querySelector('.existTime').innerText = time
-  }, 1000)
+  }, 1e3)
 }
