@@ -67,7 +67,7 @@ const pig = {
     now = Date.now()
     // 毫秒差值为当前时间减去过去时间
     let time = (now - before) / 1000
-    let dd = Math.floor(time / (24 * 60 * 60))
+    let dd = Math.floor(time / (24 * 60 * 60)).toString()
     let hh = Math.floor((time / (60 * 60)) % 24).toString()
     let mm = Math.floor((time / 60) % 60).toString()
     let ss = Math.floor(time % 60).toString()
