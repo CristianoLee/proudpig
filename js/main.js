@@ -82,3 +82,11 @@ function buildTime(res) {
     document.querySelector('.existTime').innerText = time
   }, 1e3)
 }
+
+window.addEventListener('touchstart', () => {
+  mo()
+})
+
+function mo() {
+  console.log('我摸了你')
+}

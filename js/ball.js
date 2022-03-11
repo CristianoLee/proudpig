@@ -139,7 +139,7 @@ class CursorSpecialEffects {
 
     window.addEventListener('mousedown', this.handleMouseDown.bind(this))
     window.addEventListener('pagehide', this.handlePageHide.bind(this))
-    window.addEventListener('touchend', this.handleMouseDown.bind(this))
+    window.addEventListener('touchstart', this.handleMouseDown.bind(this))
   }
 
   run() {
