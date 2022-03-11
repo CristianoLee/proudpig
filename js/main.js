@@ -18,8 +18,16 @@ $('.backTop').on('click', () => {
 // 记录上一次滚动高度，用于判断滚动方向
 let lastHeight = window.innerHeight
 
-// 仅处理鼠标滚动
+// PC端,仅处理鼠标滚动
 window.addEventListener('wheel', () => {
+  scrollEvent()
+})
+// 移动端
+window.addEventListener('touchmove', () => {
+  scrollEvent()
+})
+// 封装滚轮移动事件
+function scrollEvent() {
   if (window.scrollY > 339) {
     $('.tools').removeClass('toolsDown').addClass('toolsUp')
     $('.backTop').removeClass('backTopDown').addClass('backTopUp')
@@ -39,7 +47,7 @@ window.addEventListener('wheel', () => {
   }
   // 相等则不做处理
   lastHeight = window.scrollY
-})
+}
 
 let nav_toggle = true
 let nav_width
