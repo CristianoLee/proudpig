@@ -56,9 +56,9 @@ const pig = {
       )
     }
   },
-  // 补零
+  // 补零并且转化为字符串
   padZero(time) {
-    return time > 9 ? time : '0' + time
+    return (time > 9 ? time : '0' + time).toString()
   },
   // 计算时间差（天-时-分-秒）
   // 参数传递：毫秒值,before:过去时间，now:当前时间
@@ -67,13 +67,19 @@ const pig = {
     now = Date.now()
     // 毫秒差值为当前时间减去过去时间
     let time = (now - before) / 1000
-    let dd = Math.floor(time / (24 * 60 * 60)).toString()
-    let hh = Math.floor((time / (60 * 60)) % 24).toString()
-    let mm = Math.floor((time / 60) % 60).toString()
-    let ss = Math.floor(time % 60).toString()
+    let dd = Math.floor(time / (24 * 60 * 60))
+    let hh = Math.floor((time / (60 * 60)) % 24)
+    let mm = Math.floor((time / 60) % 60)
+    let ss = Math.floor(time % 60)
     let result =
-      dd + '天' + pig.padZero(hh) + '小时' + pig.padZero(mm) + '分钟' + pig.padZero(ss) + '秒'
-    console.log(result)
+      dd.toString() +
+      '天' +
+      pig.padZero(hh) +
+      '小时' +
+      pig.padZero(mm) +
+      '分钟' +
+      pig.padZero(ss) +
+      '秒'
     return result
   },
   // 时间换算为天数
