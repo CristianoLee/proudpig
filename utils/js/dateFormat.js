@@ -73,7 +73,8 @@ const pig = {
     let ss = Math.floor(time % 60).toString()
     let result =
       dd + '天' + pig.padZero(hh) + '小时' + pig.padZero(mm) + '分钟' + pig.padZero(ss) + '秒'
-    return dd + '天'
+    let test = 6
+    return test + '天'
   },
   // 时间换算为天数
   toDay(time) {
