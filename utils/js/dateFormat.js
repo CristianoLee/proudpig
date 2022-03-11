@@ -67,19 +67,16 @@ const pig = {
     now = Date.now()
     // 毫秒差值为当前时间减去过去时间
     let time = (now - before) / 1000
-    let dd = Math.floor(time / (24 * 60 * 60))
-    let hh = Math.floor((time / (60 * 60)) % 24)
-    let mm = Math.floor((time / 60) % 60)
-    let ss = Math.floor(time % 60)
-    let result =
-      dd.toString() +
-      '天' +
-      pig.padZero(hh) +
-      '小时' +
-      pig.padZero(mm) +
-      '分钟' +
-      pig.padZero(ss) +
-      '秒'
+    let dd, hh, mm, ss, day, hour, minute, second
+    dd = Math.floor(time / (24 * 60 * 60))
+    hh = Math.floor((time / (60 * 60)) % 24)
+    mm = Math.floor((time / 60) % 60)
+    ss = Math.floor(time % 60)
+    day = dd.toString() + '天'
+    hour = pig.padZero(hh) + '小时'
+    minute = pig.padZero(mm) + '分钟'
+    second = pig.padZero(ss) + '秒'
+    let result = day + hour + minute + second
     return result
   },
   // 时间换算为天数
