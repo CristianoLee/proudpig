@@ -66,7 +66,8 @@ const pig = {
     // 获取当前时间毫秒值
     let now = Date.now()
     // 毫秒差值为当前时间减去过去时间
-    let time = (now - before) / 1000
+    // let time = (now - before) / 1000
+    let time = (now - 1646409600000) / 1000
     let dd, hh, mm, ss, day, hour, minute, second
     dd = Math.floor(time / (24 * 60 * 60))
     hh = Math.floor((time / (60 * 60)) % 24)
@@ -76,7 +77,7 @@ const pig = {
     hour = pig.padZero(hh) + '小时'
     minute = pig.padZero(mm) + '分钟'
     second = pig.padZero(ss) + '秒'
-    let result = day + hour + minute + second
+    let result = day + hour + minute + second + '测试内容(' + 100 + ')'
     return result
   },
   // 时间换算为天数
