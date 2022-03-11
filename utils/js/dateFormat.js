@@ -62,9 +62,9 @@ const pig = {
   },
   // 计算时间差（天-时-分-秒）
   // 参数传递：毫秒值,before:过去时间，now:当前时间
-  timeDifference(before, now) {
+  timeDifference(before) {
     // 获取当前时间毫秒值
-    now = Date.now()
+    let now = Date.now()
     // 毫秒差值为当前时间减去过去时间
     let time = (now - before) / 1000
     let dd, hh, mm, ss, day, hour, minute, second
