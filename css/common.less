@@ -62,8 +62,10 @@ i {
       width: 66.66666667%;
 
       section {
+        position: relative;
         height: 219px;
         margin-bottom: 15px;
+
       }
     }
 
@@ -106,7 +108,11 @@ i {
     text-align: center;
     width: 80%;
     margin: 0 auto;
-    padding-top: 20px
+    padding-top: 20px;
+
+    a {
+      color: #848484;
+    }
   }
 
 }
@@ -114,11 +120,6 @@ i {
 
 ::-webkit-scrollbar {
   width: 8px
-}
-
-// 鼠标经过改变文字颜色
-::selection {
-  background-color: rgba(255, 255, 255, 0.8)
 }
 
 .mobile(@width) {
@@ -141,14 +142,42 @@ i {
     width: 100% !important;
   }
 
-  .main-content section {
-    height: 300px !important;
-  }
-
   .main-list,
   #pc-topnav,
   .head-bg {
     display: none;
+  }
+
+
+
+  .article-container {
+    height: auto !important;
+
+
+    .articleCover-box {
+      width: 100% !important;
+      height: auto !important;
+      display: block !important;
+      padding: 0 !important;
+
+      .article-cover {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        border: none !important;
+        padding: 0 !important;
+      }
+    }
+
+    .article-introduce {
+      display: block !important;
+      width: 100% !important;
+    }
+
+    .article-footer {
+      position: relative !important;
+      display: block !important;
+    }
   }
 }
 
@@ -160,7 +189,7 @@ i {
 
 @media (max-width: 992px) {
   .container {
-    width: 80%;
+    width: 90%;
   }
 
   .main-content {

@@ -1,7 +1,8 @@
 :root {
-  --head-bg: url('../image/head-light.jpg') no-repeat center/cover;
+  --head-bg: url(../image/head-light.jpg) no-repeat center/cover;
   --main-bgc: #f5f5f5;
   --content-bgc: rgba(255, 255, 255, 0.8);
+  --select-bgc: #181c27;
   --content-fc: #000;
   --list-fc: #666;
   --md-bgc: rgba(0, 0, 0, 0.3);
@@ -9,11 +10,15 @@
   --scroll-thumb-bg: rgba(194, 194, 194);
   --scroll-thumb-hover-bg: #aaaf;
   --topnav-bg: rgba(40, 42, 44, 0.6);
+  --article-icon-hv: #6ec3f5;
+  --black-white: #000;
+  --article-bd: #d3d6da;
 }
 [color=dark] {
-  --head-bg: url('../image/head-dark.png') no-repeat top/cover;
+  --head-bg: url(../image/head-dark.png) no-repeat top/cover;
   --main-bgc: #181c27;
   --content-bgc: #262a32;
+  --select-bgc: rgba(255, 255, 255, 0.8);
   --content-fc: #eee;
   --list-fc: #ccc;
   --md-bgc: rgba(255, 255, 255, 0.3);
@@ -21,6 +26,9 @@
   --scroll-thumb-bg: #848589;
   --scroll-thumb-hover-bg: #a6a6a6;
   --topnav-bg: #181c27cc;
+  --article-icon-hv: #3e8dc5;
+  --black-white: #fff;
+  --article-bd: #ccc;
 }
 /*定义滚动条轨道 内阴影+圆角*/
 ::-webkit-scrollbar-track {
@@ -54,8 +62,8 @@ html {
   color: var(--content-fc);
 }
 .main-content section:hover {
-  -webkit-transition: all 0.8s;
-  transition: all 0.8s;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
   box-shadow: 2px 6px 12px var(--md-bgc);
 }
 .main-list section {
@@ -63,4 +71,49 @@ html {
 }
 #pc-topnav {
   background: var(--topnav-bg);
+}
+::selection {
+  color: var(--content-bgc);
+  background-color: var(--select-bgc);
+}
+.footer-container ::selection {
+  color: white;
+  background-color: transparent;
+}
+.introduce {
+  position: relative;
+  top: -45px;
+  color: var(--content-fc);
+  text-align: center;
+  padding: 10px;
+}
+.article-container .article-cover {
+  background: var(--main-bgc);
+}
+.article-container .article-introduce header {
+  color: var(--content-fc);
+}
+.article-container .article-introduce header .article-title {
+  color: var(--content-fc);
+}
+.article-container .article-introduce header .article-title:hover {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  color: var(--article-icon-hv);
+}
+.article-container .article-footer {
+  border-top: 1px solid var(--article-bd);
+}
+.article-container .article-footer p a {
+  color: var(--black-white);
+}
+.article-container .article-footer p a:hover {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  color: var(--article-icon-hv);
+}
+.article-container .article-footer p span:hover {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  color: var(--article-icon-hv);
 }
