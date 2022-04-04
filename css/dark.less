@@ -13,6 +13,14 @@
   --article-icon-hv: #6ec3f5;
   --black-white: #000;
   --article-bd: #d3d6da;
+  --history-tag: #f3f3f3;
+  --history-line-bg: rgb(241, 241, 241);
+  --meta-bg: #f3f3f3;
+  --comment-bg: #fff;
+  --textarea-bg: #f4f4f4;
+  --commentator-c: rgb(82, 82, 82);
+  --author: #27ae60;
+  --font-hover: #ccc;
 }
 
 [color=dark] {
@@ -30,11 +38,28 @@
   --article-icon-hv: #3e8dc5;
   --black-white: #fff;
   --article-bd: #ccc;
+  --history-tag: #3c495bbb;
+  --history-line-bg: #44474e;
+  --meta-bg: #364150;
+  --comment-bg: rgba(33, 40, 51, 0.9);
+  --textarea-bg: #364252;
+  --commentator-c: #ffffffb3;
+  --author: rgb(254, 44, 85);
+  --font-hover: #666;
 }
 
 .animate(@time) {
   -webkit-transition: @time;
   transition: @time;
+}
+
+// 所有内容区域
+.content {
+  .animate(0.6s);
+  color: var(--list-fc);
+  transition: background-color 0.8s;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  background-color: var(--content-bgc);
 }
 
 /*定义滚动条轨道 内阴影+圆角*/
@@ -66,22 +91,26 @@ html {
 }
 
 .md section {
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  .animate(0.5s);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   background-color: var(--content-bgc);
+}
+
+.main-list section {
+  color: var(--list-fc)
 }
 
 .main-content section {
   color: var(--content-fc);
 
+  article {
+    .animate(0.5s);
+  }
+
   &:hover {
     .animate(0.8s);
     box-shadow: 2px 6px 12px var(--md-bgc);
   }
-}
-
-.main-list section {
-  color: var(--list-fc)
 }
 
 #pc-topnav {
@@ -149,4 +178,30 @@ html {
       }
     }
   }
+}
+
+
+
+
+
+.history {
+
+  h2,
+  h3 {
+    .blackOrWhite
+  }
+
+  .history-tag {
+    background-color: var(--history-tag);
+  }
+
+  .history-content {
+    border-left: 4px solid var(--history-line-bg);
+  }
+}
+
+
+
+.blackOrWhite {
+  color: var(--black-white);
 }

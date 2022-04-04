@@ -23,20 +23,18 @@
   user-select: none;
 }
 .head-container #pc-topnav .menu-pc ul li a {
+  -webkit-transition: all 0.4s;
+  transition: 0.4s;
   padding: 7px 14px;
   font-size: 15px;
   color: #fff;
   display: block;
 }
 .head-container #pc-topnav .menu-pc ul li:hover {
-  -webkit-transition: all 0.6s;
-  transition: 0.6s;
   background-color: #eeeeee;
   color: #000;
 }
 .head-container #pc-topnav .menu-pc ul li:hover a {
-  -webkit-transition: all 0.2s;
-  transition: 0.2s;
   color: #000;
 }
 .head-container #mobile-topnav {

@@ -11,8 +11,15 @@
 .container {
   margin: 0 auto;
   width: 1170px;
+  min-width: 20em;
   padding: 0 15px;
 }
+
+// 隐藏并占体积盒子
+.unvisible {
+  visibility: hidden;
+}
+
 
 .show {
   display: block;
@@ -30,19 +37,13 @@ h3,
 h4,
 h5,
 h6 {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  .animate(0.5s);
+  font-weight: 400;
 }
 
 // logo间隔半个文字距离
 i {
   margin-right: 0.5em;
-}
-
-.head-bg {
-  position: relative;
-  height: 480px;
-  z-index: 99;
 }
 
 .md {
@@ -58,19 +59,16 @@ i {
     margin: 0 -15px;
 
     .main-content {
-      float: left;
-      width: 66.66666667%;
+      width: 66.666666%;
 
       section {
         position: relative;
-        height: 219px;
         margin-bottom: 15px;
-
       }
     }
 
     .main-list {
-      width: 33.33333333%;
+      width: 33.333333%;
 
       .main-list-box {
         .animate(0.5s);
@@ -148,11 +146,7 @@ i {
     display: none;
   }
 
-
-
   .article-container {
-    height: auto !important;
-
 
     .articleCover-box {
       width: 100% !important;
@@ -187,9 +181,9 @@ i {
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1050px) {
   .container {
-    width: 90%;
+    width: 80%;
   }
 
   .main-content {
@@ -201,10 +195,81 @@ i {
   }
 }
 
+@media (max-width: 992px) {
+  .container {
+    width: 90%;
+  }
+
+  .article-introduce {
+    padding-left: 5% !important;
+  }
+
+  .main-content {
+    width: 100% !important;
+  }
+
+  .main-list {
+    display: none;
+  }
+
+}
+
 @media (max-width: 767px) {
+
+  .reply-box {
+    height: 8.5em !important;
+  }
+
+  .submit-box {
+    height: 2.4em !important;
+  }
+
+  .submit {
+    width: 42px !important;
+    height: 24px !important;
+  }
+
+  #comment-text {
+    height: 10em !important;
+  }
+
+  #reply-text {
+    height: 5em !important;
+  }
+
   #mobile-topnav {
     display: block !important;
   }
+
+  .comment-main {
+    width: 80% !important;
+  }
+
+  .readArticle {
+    position: relative !important;
+  }
+
+  .article-box {
+    padding: 0 !important;
+
+    .articleCover-box {
+      div {
+        width: 100% !important;
+        height: auto !important;
+      }
+    }
+
+    .article-introduce {
+      padding: 20px !important;
+
+      .article-introduce-content {
+        height: auto !important;
+      }
+    }
+  }
+
+  // 评论区域高度缩小
+  .comment-box {}
 
   .mobile(@width: 100%)
 }
